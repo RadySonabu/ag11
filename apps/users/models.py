@@ -14,7 +14,7 @@ class BaseModel(models.Model):
         abstract = True
 
 class Roles(BaseModel):
-    role = models.CharField(max_length=100)
+    role = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.role
